@@ -126,28 +126,32 @@ docker exec -it container-name /bin/bash
 
 1. 前往 **设置 → 设备与服务** 打开集成列表。
 
-   <img src="./doc/images/1-setting_devices_and_services.png" width="880">
+   <img src="./doc/images/1_setting_devices_and_services.png" width="880">
 
 2. 点击 **添加集成**，搜索 **bluetti**，选择 **BLUETTI 集成** 开始 OAuth 授权。
 
-   <img src="./doc/images/2-search_and_add_integration.png" width="880">
+   <img src="./doc/images/2_search_and_add_integration.png" width="880">
 
 3. 授权 **Home Assistant** 访问你的 BLUETTI 账户并连接 BLUETTI 云服务。
 
-   <img src="./doc/images/3-oauth_agree_to_connect_with_bluetti.png">
+   <img src="./doc/images/3_oauth_agree_to_connect_with_bluetti.png">
 
 4. 输入 BLUETTI 账户凭证登录并授权。
 
-   <img src="./doc/images/4-oauth_enter_bluetti_account.png">
+   <img src="./doc/images/4_oauth_enter_bluetti_account.png">
 
 5. 确认 **Home Assistant** 可以绑定你的 BLUETTI 账户。
 
-   <img src="./doc/images/5-oauth_link_account_to_ha.png">
+   <img src="./doc/images/5_oauth_link_account_to_ha.png">
 
-6. 选择你希望在 Home Assistant 中使用和管理的 BLUETTI 设备。
+6. 使用你的 **Home Assistant** 实例地址更新 URL。
 
-   <img src="./doc/images/6-choose_bluetti_devices.png" width="880">
-   <img src="./doc/images/7-bluetti_device_in_ha.png" width="880">
+   <img src="./doc/images/6_my_home_assistent_link.png" width="880">
+
+7. 选择你希望在 Home Assistant 中使用和管理的 BLUETTI 设备。
+
+   <img src="./doc/images/7_choose_bluetti_devices.png" width="880">
+   <img src="./doc/images/8_bluetti_device_in_ha.png" width="880">
 
 ## ❓ 常见问题 (FAQ)
 

@@ -136,31 +136,35 @@ handmatig toevoegen als een **aangepaste repository**.
 1. Ga naar **“_Instellingen → Apparaten en diensten_”** om de lijst met
    integraties te openen.
 
-   <img src="./doc/images/1-setting_devices_and_services.png" width="880">
+   <img src="./doc/images/1_setting_devices_and_services.png" width="880">
 
 2. Klik op **“_Integratie toevoegen_”**, zoek naar het merk **bluetti**, en
    selecteer de **BLUETTI**-integratie om de OAuth-autorisatie te starten.
 
-   <img src="./doc/images/2-search_and_add_integration.png" width="880">
+   <img src="./doc/images/2_search_and_add_integration.png" width="880">
 
 3. Je moet toestemming geven zodat **Home Assistant** toegang krijgt tot je
    BLUETTI-account en verbinding kan maken met de BLUETTI-cloudservice.
 
-   <img src="./doc/images/3-oauth_agree_to_connect_with_bluetti.png">
+   <img src="./doc/images/3_oauth_agree_to_connect_with_bluetti.png">
 
 4. Voer je BLUETTI-accountgegevens in om in te loggen en te autoriseren.
 
-   <img src="./doc/images/4-oauth_enter_bluetti_account.png">
+   <img src="./doc/images/4_oauth_enter_bluetti_account.png">
 
 5. Bevestig dat **Home Assistant** je BLUETTI-account mag koppelen.
 
-   <img src="./doc/images/5-oauth_link_account_to_ha.png">
+   <img src="./doc/images/5_oauth_link_account_to_ha.png">
 
-6. Selecteer vervolgens de BLUETTI-apparaten die je wilt gebruiken en beheren in
+6. Werk de URL bij met het adres van je **Home Assistant**-instantie.
+
+   <img src="./doc/images/6_my_home_assistent_link.png" width="880">
+
+7. Selecteer vervolgens de BLUETTI-apparaten die je wilt gebruiken en beheren in
    Home Assistant.
 
-   <img src="./doc/images/6-choose_bluetti_devices.png" width="880">
-   <img src="./doc/images/7-bluetti_device_in_ha.png" width="880">
+   <img src="./doc/images/7_choose_bluetti_devices.png" width="880">
+   <img src="./doc/images/8_bluetti_device_in_ha.png" width="880">
 
 ## ❓ Veelgestelde vragen (FAQ)
 

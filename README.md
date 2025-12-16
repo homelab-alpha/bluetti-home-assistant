@@ -132,30 +132,34 @@ manually as a **custom repository**.
 
 1. Go to **_Settings → Devices & Services_** to open the list of integrations.
 
-   <img src="./doc/images/1-setting_devices_and_services.png" width="880">
+   <img src="./doc/images/1_setting_devices_and_services.png" width="880">
 
 2. Click **_Add Integration_**, search for **bluetti**, and select the **BLUETTI
    Integration** to start OAuth authorization.
 
-   <img src="./doc/images/2-search_and_add_integration.png" width="880">
+   <img src="./doc/images/2_search_and_add_integration.png" width="880">
 
 3. Grant **Home Assistant** permission to access your BLUETTI account and
    connect to the BLUETTI cloud service.
 
-   <img src="./doc/images/3-oauth_agree_to_connect_with_bluetti.png">
+   <img src="./doc/images/3_oauth_agree_to_connect_with_bluetti.png">
 
 4. Enter your BLUETTI account credentials to log in and authorize.
 
-   <img src="./doc/images/4-oauth_enter_bluetti_account.png">
+   <img src="./doc/images/4_oauth_enter_bluetti_account.png">
 
 5. Confirm that **Home Assistant** may link your BLUETTI account.
 
-   <img src="./doc/images/5-oauth_link_account_to_ha.png">
+   <img src="./doc/images/5_oauth_link_account_to_ha.png">
 
-6. Select the BLUETTI devices you want to use and manage in Home Assistant.
+6. Update the URL with the address of your **Home Assistant** instance.
 
-   <img src="./doc/images/6-choose_bluetti_devices.png" width="880">
-   <img src="./doc/images/7-bluetti_device_in_ha.png" width="880">
+   <img src="./doc/images/6_my_home_assistent_link.png" width="880">
+
+7. Select the BLUETTI devices you want to use and manage in Home Assistant.
+
+   <img src="./doc/images/7_choose_bluetti_devices.png" width="880">
+   <img src="./doc/images/8_bluetti_device_in_ha.png" width="880">
 
 ## ❓ Frequently Asked Questions (FAQ)
 
