@@ -1,114 +1,149 @@
 # BLUETTI-integratie voor Home Assistant
 
-[🇬🇧 English](./README.md) | [🇳🇱 Dutch](./README_nl.md) |
-[🇩🇪 German](./README_de.md) | [🇨🇳 简体中文](./README_zh.md)
+[🇬🇧 Engels](./README.md) | [🇳🇱 Nederlands](./README_nl.md) |
+[🇩🇪 Duits](./README_de.md) | [🇨🇳 Chinees](./README_zh.md)
 
-De **BLUETTI powerstation-integratie** is een geïntegreerde component van Home
-Assistant, officieel ondersteund door BLUETTI. Hiermee kun je BLUETTI slimme
+De **BLUETTI-integratie** is een geïntegreerde component van Home Assistant, en
+word officieel ondersteund door BLUETTI. Hiermee kun je BLUETTI slimme
 powerstations gebruiken binnen Home Assistant.
-
-De GitHub-repository van de integratie is:
-[https://github.com/bluetti-official/bluetti-home-assistant](https://github.com/bluetti-official/bluetti-home-assistant).
 
 ## ✨ Functies
 
-- ✅ Status van de omvormer
-- ✅ Batterijlading (SOC)
-- ✅ AC-schakelaar
-- ✅ DC-schakelaar
-- ✅ Hoofdschakelaar
+- ✅ Aan/uit-schakelaar
+- ✅ Omvormerstatus
+- ✅ Batterijladingstoestand (SoC)
+- ✅ AC schakelaar
+- ✅ DC schakelaar
+- ✅ Hoofdunit aan/uit-schakelaar
 - ✅ AC ECO-modus
 - ✅ DC ECO-modus
-- ✅ Werkmodusschakelaar: noodstroom, zelfverbruik, piek- en daluren
-- ✅ Slaap Modus
+- ✅ Bedrijfsmodus-schakelaar: Noodstroom, Eigen verbruik, Piek- en daltarief
+- ✅ Slaapstand
 
 ## 🎮 Ondersteunde powerstationmodellen
 
 > [!NOTE]
 >
-> Meer powerstationmodellen zullen in de toekomst worden toegevoegd.
+> In toekomstige versies zal de BLUETTI-integratie worden uitgebreid met
+> ondersteuning voor nieuwe en bestaande powerstationmodellen.
 
-|      Powerstationmodel      | Omvormerstatus | Batterij-SOC | AC-schakelaar | DC-schakelaar | Hoofdschakelaar | AC ECO | DC ECO | Werkmodusschakelaar | Slaap Modus |
-| :-------------------------: | :-------------: | :---------: | :-----------: | :-----------: | :-------------: | :----: | :----: | :-----------------: | :---------: | 
-| AP300                       |                 |     ✅      |      ✅      |               |                 |   ✅   |        |          ✅         |      ✅    |
-| EL300                       |                 |     ✅      |      ✅      |       ✅      |                 |   ✅   |   ✅   |          ✅        |      ✅     |
-| EL320,AORA320               |                 |     ✅      |      ✅      |       ✅      |                 |   ✅   |   ✅   |          ✅        |      ✅     |
-| EL400                       |                 |     ✅      |      ✅      |       ✅      |                 |   ✅   |   ✅   |          ✅        |      ✅     |
-| EP13K                       |       ✅        |     ✅      |              |               |       ✅        |        |        |          ✅        |              |
-| EP2000                      |       ✅        |     ✅      |              |               |       ✅        |        |        |          ✅        |              |
-| EP6K                        |       ✅        |     ✅      |              |               |       ✅        |        |        |          ✅        |              |
-| EP760                       |       ✅        |     ✅      |              |               |       ✅        |        |        |                    |              |
-| FP                          |       ✅        |     ✅      |      ✅      |       ✅     |                  |   ✅   |   ✅   |         ✅        |       ✅     |
-| PR100V2,EL100V2,AORA100V2   |                 |     ✅      |      ✅      |       ✅     |                  |   ✅   |   ✅   |         ✅        |       ✅     |
-| PR200V2,Elite 200 V2,AORA200|                 |     ✅      |      ✅      |       ✅     |                  |   ✅   |   ✅   |         ✅        |       ✅     |
-| PR30V2,EL30V2               |                 |     ✅      |      ✅      |       ✅     |                  |   ✅   |   ✅   |         ✅        |       ✅     |
+| Powerstation model                       | Omvormerstatus | Batterij-SoC | AC-schakelaar | DC-schakelaar | Hoofdschakelaar | AC ECO | DC ECO | Werkmodusschakelaar | Slaapstand |
+| :--------------------------------------- | :------------: | :----------: | :-----------: | :-----------: | :-------------: | :----: | :----: | :-----------------: | :--------: |
+| AP300                                    |                |      ✅      |      ✅       |               |                 |   ✅   |        |         ✅          |     ✅     |
+| EL300                                    |                |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
+| EL320,<br />AORA320                      |                |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
+| EL400                                    |                |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
+| EP13K                                    |       ✅       |      ✅      |               |               |       ✅        |        |        |         ✅          |            |
+| EP2000                                   |       ✅       |      ✅      |               |               |       ✅        |        |        |         ✅          |            |
+| EP6K                                     |       ✅       |      ✅      |               |               |       ✅        |        |        |         ✅          |            |
+| EP760                                    |       ✅       |      ✅      |               |               |       ✅        |        |        |                     |            |
+| FP                                       |       ✅       |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
+| PR100V2,<br />EL100V2,<br />AORA100V2    |                |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
+| PR200V2,<br />Elite 200 V2,<br />AORA200 |                |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
+| PR30V2,<br />EL30V2                      |                |      ✅      |      ✅       |      ✅       |                 |   ✅   |   ✅   |         ✅          |     ✅     |
 
-## 📦 Installatie van de integratie
+## 📦 Installatie van de BLUETTI-integratie
 
-Er zijn twee manieren om de `BLUETTI powerstation-integratie` te installeren:
+### Home Assistant Operating System
 
-### Handmatige installatie
+Volg onderstaande stappen om de **BLUETTI-integratie** te installeren in **Home
+Assistant**.
 
-1. Ga naar de configuratiemap van `Home Assistant`:
+Je kunt hiervoor gebruikmaken van de **Advanced SSH & Web Terminal**-add-on of
+verbinding maken met je **Home Assistant-server** via **SSH**.
+
+```bash
+ssh gebruikersnaam@IP-adres-van-de-host
+```
+
+Als je gebruik maakt Home Assistant als Docker-container op **Windows**,
+**macOS** of **Linux**? Log dan eerst in op de host (de computer waarop Docker
+actief is):
+
+```bash
+ssh gebruikersnaam@IP-adres-van-de-host
+```
+
+Open vervolgens een shell in de Home Assistant-container:
+
+```bash
+docker exec -it container-naam /bin/bash
+```
+
+### Installatiestappen
+
+1. **Ga naar de configuratiemap van Home Assistant:** /<ha workspaces>/
 
    ```bash
-   cd /<ha workspaces>/core/config/custom_components
+   cd config 2> /dev/null || echo "Je bevindt je al in de map 'config'. Ga verder met stap 2."
    ```
 
-2. Clone de GitHub-repository van de `BLUETTI powerstation-integratie`:
+2. **Maak de map `custom_components` aan** (als deze nog niet bestaat):
+
+   ```bash
+   mkdir -pv custom_components
+   ```
+
+3. **Kloon de GitHub-repository van de BLUETTI-integratie:**
 
    ```bash
    git clone https://github.com/bluetti-official/bluetti-home-assistant.git
+   cp -a /config/bluetti-home-assistant/custom_components/bluetti /config/custom_components/bluetti
    ```
 
-3. Of download het zip-bestand van de integratie en pak het uit in de map
-   `custom_components` van `Home Assistant`:
+4. **Herstart Home Assistant** om de nieuwe integratie te laden:
+   - Voor **Home Assistant Operating System**:
 
-   ```bash
-   unzip xxx.zip -d /<ha workspaces>/core/config/custom_components/bluetti
-   ```
+     ```bash
+     ha core restart
+     ```
 
-4. Start vervolgens **Home Assistant** opnieuw op.
+   - Voor **Docker-installaties**:
 
-### Installatie via HACS
+     ```bash
+     docker restart container-naam
+     ```
 
-De **BLUETTI powerstation-integratie** is nog niet opgenomen in de officiële
+### Installatie via Home Assistant Community Store (HACS)
+
+De **BLUETTI-integratie** is nog niet opgenomen in de officiële
 [HACS-repository](https://github.com/hacs/integration). Daarom moet je deze
 handmatig toevoegen als een **aangepaste repository**.
 
-**HACS** (Home Assistant Community Store) is een uitbreiding voor Home Assistant
-die fungeert als een soort **app store** voor integraties van derden. Zorg er
-dus eerst voor dat HACS is geïnstalleerd voordat je aangepaste repositories kan
-toevoegt.
+> [!NOTE]
+>
+> **Wat is HACS?** HACS (_Home Assistant Community Store_) is een uitbreiding
+> voor Home Assistant die fungeert als een soort **app store** voor integraties
+> van derden. Zorg ervoor dat HACS al is geïnstalleerd voordat je aangepaste
+> repositories toevoegt.
 
-#### Stappenplan
+#### Installatiestappen
 
-1. Open **HACS → Integraties → Aangepaste repository** (rechtsboven op de
+1. Open **HACS → Integraties → Aangepaste repositories** (rechtsboven op de
    pagina).
 
 2. Voeg de volgende repository toe en selecteer het juiste type:
-   - **Repository:**
-     [https://github.com/bluetti-official/bluetti-home-assistant.git](https://github.com/bluetti-official/bluetti-home-assistant.git)
+   - **Repository:** [https://github.com/bluetti-official/bluetti-home-assistant.git](https://github.com/bluetti-official/bluetti-home-assistant.git)
    - **Type:** Integration
 
-3. Ga daarna naar de pagina **Integraties** in HACS. De `BLUETTI`-integratie
-   verschijnt nu in de lijst. Klik om te installeren.
+3. Ga daarna naar **HACS → Integraties**. De **BLUETTI**-integratie verschijnt
+   nu in de lijst. Klik erop om te installeren.
 
-4. Start vervolgens **Home Assistant** opnieuw op.
+4. **Herstart Home Assistant** om de installatie te voltooien.
 
 ## ⚙️ Configuratie van de integratie
 
-1. Ga naar “Instellingen → Apparaten en diensten” om de lijst met integraties te
-   openen.
+1. Ga naar **“_Instellingen → Apparaten en diensten_”** om de lijst met
+   integraties te openen.
 
    <img src="./doc/images/1-setting_devices_and_services.png" width="880">
 
-2. Klik op “Integratie toevoegen”, zoek naar het merk `bluetti`, en selecteer de
-   `BLUETTI`-integratie om de OAuth-autorisatie te starten.
+2. Klik op **“_Integratie toevoegen_”**, zoek naar het merk **bluetti**, en
+   selecteer de **BLUETTI**-integratie om de OAuth-autorisatie te starten.
 
    <img src="./doc/images/2-search_and_add_integration.png" width="880">
 
-3. Je moet toestemming geven zodat `Home Assistant` toegang krijgt tot je
+3. Je moet toestemming geven zodat **Home Assistant** toegang krijgt tot je
    BLUETTI-account en verbinding kan maken met de BLUETTI-cloudservice.
 
    <img src="./doc/images/3-oauth_agree_to_connect_with_bluetti.png">
@@ -117,7 +152,7 @@ toevoegt.
 
    <img src="./doc/images/4-oauth_enter_bluetti_account.png">
 
-5. Bevestig dat `Home Assistant` je BLUETTI-account mag koppelen.
+5. Bevestig dat **Home Assistant** je BLUETTI-account mag koppelen.
 
    <img src="./doc/images/5-oauth_link_account_to_ha.png">
 
@@ -129,27 +164,52 @@ toevoegt.
 
 ## ❓ Veelgestelde vragen (FAQ)
 
-### De `BLUETTI-integratie` wordt niet gevonden na installatie
+### **Vraag:** De BLUETTI-integratie wordt niet gevonden na installatie?
 
-Controleer of het pad `custom_components` correct is en of het
-`Home Assistant`-systeem opnieuw is opgestart.
+**Antwoord:** Controleer of de map `custom_components` op de juiste locatie
+staat en start Home Assistant opnieuw op.
 
-### De integratie blijft offline of maakt geen verbinding met de BLUETTI-server
+### **Vraag:** De integratie blijft offline of kan geen verbinding maken met de BLUETTI-server?
 
-Controleer de **netwerkverbinding**, **poorten** en **firewall** om zeker te
-zijn dat `Home Assistant` toegang heeft tot de BLUETTI-powerstations.
+**Antwoord:** Controleer je **netwerkverbinding** **poortinstellingen** en
+**firewall** om er zeker van te zijn dat **Home Assistant** toegang heeft tot de
+BLUETTI-powerstations.
 
-### Hoe update ik de `BLUETTI-integratie`?
+### **Vraag:** Werkt de BLUETTI-integratie lokaal?
 
-1. Voer de update uit via de HACS-beheerpagina.
-2. Of update via `git`:
+**Antwoord:** Nee, de BLUETTI-integratie werkt op dit moment via de cloud. Er
+wordt op dit moment gewerkt aan een lokale optie, maar de ontwikkeling daarvan
+kost tijd.
+
+## 🔄 Updaten van de BLUETTI-integratie?
+
+### Home Assistant Operating System
+
+1. **Werk de BLUETTI-integratie bij** (indien nodig):
 
    ```bash
-   cd /<ha workspaces>/config/custom_components/bluetti
+   cd /config/bluetti-home-assistant
    git pull
+   cp -a --force custom_components/bluetti /config/custom_components/bluetti
    ```
+
+2. **Herstart Home Assistant** om de bijgewerkte integratie te laden:
+   - Voor **Home Assistant Operating System**:
+
+     ```bash
+     ha core restart
+     ```
+
+   - Voor **Docker-installaties**:
+
+     ```bash
+     docker restart container-naam
+     ```
+
+### Home Assistant Community Store
+
+Voer de update uit via de HACS-beheerpagina.
 
 ## 📮 Ondersteuning & feedback
 
-💬 Heb je problemen of suggesties? Maak een issue aan op GitHub:
-[https://github.com/bluetti-official/bluetti-home-assistant/issues](https://github.com/bluetti-official/bluetti-home-assistant/issues)
+💬 Heb je vragen, problemen of suggesties? Laat het ons weten via GitHub issues: [https://github.com/bluetti-official/bluetti-home-assistant/issues](https://github.com/bluetti-official/bluetti-home-assistant/issues)
